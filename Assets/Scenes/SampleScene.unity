@@ -757,6 +757,7 @@ GameObject:
   - component: {fileID: 1058866312}
   - component: {fileID: 1058866317}
   - component: {fileID: 1058866318}
+  - component: {fileID: 1058866319}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -917,6 +918,19 @@ MonoBehaviour:
   comboResetTime: 1
   attackRange: 1.5
   baseDamage: 20
+--- !u!114 &1058866319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058866310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7547b6c9612b24888d8eb2f5f1159f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthController
+  health: 100
 --- !u!1 &1146809691
 GameObject:
   m_ObjectHideFlags: 0

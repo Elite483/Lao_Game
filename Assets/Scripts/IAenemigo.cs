@@ -66,7 +66,7 @@ public class IAEnemigo : MonoBehaviour
             Debug.Log($"⚔️ IA Enemigo: Lanzó un ataque e infligió {dañoAtaque} de daño a Yin Lao.");
 
             // Aquí se conectará con el daño real al Player en el siguiente paso
-            // _playerTransform.GetComponent<PlayerHealth>().RecibirDaño(dañoAtaque);
+            _playerTransform.GetComponent<PlayerHealth>().ReceiveDamage(dañoAtaque);
 
             _proximoAtaqueTime = Time.time + tiempoEntreAtaques;
         }
