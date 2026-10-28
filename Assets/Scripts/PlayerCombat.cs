@@ -43,8 +43,14 @@ public class PlayerCombat : MonoBehaviour
 
         Debug.Log($"⚔️ ¡ZAS! Yin Lao ejecuta el GOLPE: #_{_currentComboStep}_");
 
-        // Busca al enemigo directo por su script en la escena
-        IAEnemigo enemigoEnEscena = Object.FindFirstObjectByType<IAEnemigo>();
+        IAEnemigo enemigoEnEscena = new();
+
+        var boxcast = Physics.BoxCastAll(transform.position, Vector3.one * 2, Vector3.forward, Quaternion.identity);
+
+        foreach (var colision in boxcast)
+        {
+            colision.transform.TryGetComponent<IAEnemigo>(out enemigoEnEscena);
+        }
 
         if (enemigoEnEscena != null)
         {
